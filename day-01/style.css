@@ -1,0 +1,31 @@
+.chu-mau-do { 
+    color: red;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size:12;
+}
+.space-4x {
+    margin-left: 20px;
+}
+
+br {
+    margin-bottom: 200px;
+}
+p {
+    text-align: left;
+}
+p {
+    color: black;
+    font-size: 16px;
+}
+p {
+    background-color: aquamarine;
+}
+pre {
+    background-color: pink;
+}
+hr {
+    box-shadow: 1px -4px 16px 1px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
