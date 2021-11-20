@@ -1,0 +1,43 @@
+// precompile css: 
+// Less, Sass/SCSS
+// compile -> css
+
+.color {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.color-red {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.color-blue {
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.color {
+    font-weight: bold;
+    font-size: 16px;
+    &-red {
+        color: red;
+    }
+    &-red {
+        color: blue;
+    }
+}
+
+$width: 220px;
+
+.col-left {
+    float: left;
+    width: $width;
+}
+.col-right {
+    float: left;
+    width: calc(100% - $width);
+}
