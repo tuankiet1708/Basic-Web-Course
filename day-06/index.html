@@ -1,0 +1,225 @@
+<head>
+    
+    <style type="text/css">
+        .table-Internal{
+            border: 1px solid grey;
+            border-collapse: collapse;
+            width: 500px;
+            text-align: center;
+        }
+        .td-Internal{
+            width: 247px; 
+            border: 1px solid blue;
+        }
+        .color-blue {
+            background-color:  blue;
+        }
+        .color-red {
+            background-color:  red;
+        }
+        .color-blue {
+            background-color:  blue;
+        }
+        .color-orange {
+            background-color:  orange;
+        }
+        .blur-1 {
+            opacity: 0.1;
+        }
+        .blur-2 {
+            opacity: 0.2;
+        }
+        .blur-3 {
+            opacity: 0.3;
+        }
+        .test-internal {
+            background-color: orange !important;
+        }
+
+        .new-class {
+            background-color: red !important;
+        }
+
+        .td-Internal.td {
+            background: green;
+        }
+        .parent {
+            background: green;
+            font-weight: 700;
+        }
+        .parent .children {
+            background: red;
+            font-size: 40px;
+        }
+        .parent .children a {
+            font-size: 60px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./styleCSS.css" />
+    
+</head>
+<body>
+    <h1 style="color: blue;">
+        <span>Thể hiện bảng dưới đây bằng</span>
+        <span style="color: red;">Inline CSS</span>
+        <span>:</span>
+    </h1>
+    <table style="border: 5px solid green; border-collapse: separate; padding: 10px;" cellspacing="0">
+        <tr>
+            <td style="border: 1px solid grey; background-color: aliceblue;" width="200"></td>
+            <td style="border: 1px solid grey;">AliceBlue</td>
+            <td style="border: 1px solid grey;">rgb(240,248,255)</td>
+            <td style="border: 1px solid grey;">#F0F8FF</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid grey; background-color: antiquewhite;"></td>
+            <td style="border: 1px solid grey;">AntiqueWhite</td>
+            <td style="border: 1px solid grey;">rgb(250,235,215)</td>
+            <td style="border: 1px solid grey;">#FAEBD7</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid grey; background-color: aqua;"></td>
+            <td style="border: 1px solid grey;">Aqua</td>
+            <td style="border: 1px solid grey;">rgb(0,255,255)</td>
+            <td style="border: 1px solid grey;">#00FFFF</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid grey; background-color: aquamarine;"></td>
+            <td style="border: 1px solid grey;">Aquamarine</td>
+            <td style="border: 1px solid grey;">rgb(127,255,212)</td>
+            <td style="border: 1px solid grey;">#7FFFD4</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid grey; background-color: azure;"></td>
+            <td style="border: 1px solid grey;">Azure</td>
+            <td style="border: 1px solid grey;">rgb(240,255,255)</td>
+            <td style="border: 1px solid grey;">#F0FFFF</td>
+        </tr>
+    </table>
+
+    <h1 style="color: blue;">
+        <span>Thể hiện bảng dưới đây bằng</span>
+        <span style="color: #ffa500;">Internal CSS</span>
+        <span>:</span>
+    </h1>
+    <table class="table-Internal">
+        <tr>
+            <td  style="background: #0000fe; opacity: 0.1;"  class="td-Internal"></td>
+            <td  class="td-Internal td">#0000fe</td>
+            <!-- td: 
+                    border: 1px solid black;
+                    background: red; -->
+
+            <!-- .td-Internal{
+                    width: 247px; 
+                    border: 1px solid grey;
+                } -->
+
+            <!-- ket-hop {
+                border: 1px solid grey;
+                width: 247px; 
+                background: red;
+            } -->
+        </tr>
+        <tr>
+            <td  style="background: #0000fe; opacity: 0.2;"  class="td-Internal"></td>
+            <td  class="td-Internal">#0000fe</td>
+        </tr>
+        <tr>
+            <td  style="background: #0000fe; opacity: 0.3;"  class="td-Internal"></td>
+            <td  class="td-Internal">#0000fe</td>
+        </tr>
+        <tr>
+            <td  style="background: red; opacity: 0.1;"  class="td-Internal"></td>
+            <td  class="td-Internal">#0000fe</td>
+        </tr>
+        <tr>
+            <td  style="background: red; opacity: 0.2;"  class="td-Internal"></td>
+            <td  class="td-Internal">#0000fe</td>
+        </tr>
+        <tr>
+            <td  style="background: red; opacity: 0.3;"  class="td-Internal"></td>
+            <td  class="td-Internal">#0000fe</td>
+        </tr>
+    </table>
+
+    <h1>
+        <span style="color: blue;">Thể hiện bảng dưới đây bằng</span>
+        <span style="color: salmon;">External CSS</span>
+        <span>:</span>
+    </h1>
+    <table class="table-External">
+        <tr class="trhead">
+            <th class="no">STT</th>
+            <th class="msv">Mã Thẻ SV</th>
+            <th class="name">Họ Tên</th>
+            <th class="birthday">Ngày Sinh</th>
+            <th class="sex">Giới Tính</th>
+            <th class="class">Lớp</th>
+        </tr>
+        <tr>
+            <td class="td">1</td>
+            <td class="td">12A10010151</td>
+            <td class="td">Nguyễn Hoàng Anh</td>
+            <td class="td">23/11/1992</td>
+            <td class="td">Nam</td>
+            <td class="td">12A1</td>
+        </tr>
+        <tr>
+            <td class="td">2</td>
+            <td class="td">12A10010151</td>
+            <td class="td">Lê Thị Hồng Anh</td>
+            <td class="td">23/11/1992</td>
+            <td class="td">Nam</td>
+            <td class="td">12A1</td>
+        </tr> <tr>
+            <td class="td">3</td>
+            <td class="td">12A10010151</td>
+            <td class="td">Hoàng Hiếu Dương</td>
+            <td class="td">23/11/1992</td>
+            <td class="td">Nam</td>
+            <td class="td">12A1</td>
+        </tr>
+        <tr>
+            <td class="td">4</td>
+            <td class="td">12A10010151</td>
+            <td class="td">Nguyễn Hoàng Anh</td>
+            <td class="td">23/11/1992</td>
+            <td class="td">Nam</td>
+            <td class="td">12A1</td>
+        </tr> <tr>
+            <td class="td">5</td>
+            <td class="td">12A10010151</td>
+            <td class="td">Nguyễn Hoàng Anh</td>
+            <td class="td">23/11/1992</td>
+            <td class="td">Nam</td>
+            <td class="td">12A1</td>
+        </tr>
+    </table>
+    
+    <div>&nbsp;</div>
+
+    <div class="flex-table">
+        <div class="flex-col">
+            <div>HEADER COT 1</div>
+            <div>gia tri dong 1 cua cot 1</div>
+            <div>gia tri dong 2 cua cot 1</div>
+            <div>gia tri dong 3 cua cot 1</div>
+        </div>
+
+        <div class="flex-col">
+            <div>HEADER COT 2</div>
+            <div>gia tri dong 1 cua cot 2 </div>
+            <div>gia tri dong 2 cua cot 2 gia tri dong 1 cua cot 2 gia tri dong 1 cua cot 2 gia tri dong 1 cua cot 2</div>
+            <div>gia tri dong 3 cua cot 2</div>
+        </div>
+
+        <div class="flex-col">
+            <div>HEADER COT 3</div>
+            <div>gia tri dong 1 cua cot 3</div>
+            <div>gia tri dong 2 cua cot 3</div>
+            <div>gia tri dong 3 cua cot 3</div>
+        </div>
+    </div>
+
+</body>

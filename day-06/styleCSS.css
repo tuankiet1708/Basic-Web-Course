@@ -1,0 +1,79 @@
+.table-External{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.trhead{
+    background-color: rgb(73, 176, 207) !important;
+    font-size: 16px;
+    height: 80px;
+}
+.no{
+    width: 50px;
+    border: 1px solid black;
+}
+.msv{
+    width: 200px;
+    border: 1px solid black;
+}
+.name{
+    width: 200px;
+    border: 1px solid black;
+}
+.birthday{
+    width: 50px;
+    border: 1px solid black;
+}
+.sex{
+    width: 50px;
+    border: 1px solid black;
+}
+.class {
+    width: 50px;
+    border: 1px solid black;
+}
+.td {
+    border: 1px solid black;
+}
+
+.test-external {
+    background-color: blue;
+}
+
+.table-External tr:nth-child(2n) {
+    background-color: white;
+}
+.table-External tr:nth-child(2n+1) {
+    background-color: grey;
+}
+
+[class$="k"] {
+    color: pink;
+}
+
+vu-duc-thang {
+    display: block;
+    font-size: 60px;
+    background-color: aqua;
+    color: red;
+}
+
+.flex-table {
+    display: flex;
+}
+.flex-col > div {
+    padding: 0px 10px;
+    border: 1px solid black;
+    height: 50px;
+}
+.flex-col > div:first-child {
+    font-weight: bold;
+    background-color: blue !important;
+    color: white;
+}
+.flex-col > div:nth-child(odd) {
+    background-color: grey;
+} 
+.flex-col > div:nth-child(even) {
+    background-color: white;
+} 
