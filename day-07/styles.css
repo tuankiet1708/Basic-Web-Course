@@ -1,0 +1,85 @@
+/* block {
+    display: block;
+} */
+block > div {
+    background-color: blue;
+    margin-bottom: 30px;
+    box-shadow: -5px -5px 5px green, 5px 5px 5px orange;
+    padding: 30px;
+    color: white;
+}
+
+block > div > div {
+    margin-top: 30px;
+}
+
+block > div:nth-child(odd) div {
+    border: 20px solid;
+    border-image-source: url(https://webcoban.vn/image/matrix.png);
+    border-image-slice: 50 50 50 50;
+    border-image-repeat: repeat;
+    background-color: white;
+    padding: 50px;
+}
+
+block > div:nth-child(even) div {
+    border-width: 0px;
+    border-top-width: 20px;
+    border-style: dotted;
+    border-color: red;
+    background-image: url(https://img2.thuthuatphanmem.vn/uploads/2019/02/22/tim-dap-nen-caro_121246204.gif);
+    padding: 50px;
+    background-color: yellow;
+    background-clip: padding-box;
+    border-bottom-right-radius: 30px;
+}
+
+/* #, ., tag, [title=""], * */
+/* 
+div[title="red"] {
+    color: red;
+}
+div[title="red 20px-bold right"] {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+div[title="red 20px-italic-bold center"] {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+div[title="20px-italic-bold center"] {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+} 
+*/
+/* 
+    red, 
+    20px, 
+    bold, italic, 
+    center, right
+*/
+div[title~="red"] {
+    color: red;
+}
+div[title*="20px"] {
+    font-size: 20px;
+}
+div[title*="bold"] {
+    font-weight: bold;
+}
+div[title*="italic"] {
+    font-style: italic;
+}
+div[title*="center"] {
+    text-align: center;
+}
+div[title*="right"] {
+    text-align: right;
+}

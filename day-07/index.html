@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+	block {
+    	display: block;
+    }
+    
+    block div {
+        color: white;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+	
+	block > div  {
+    box-shadow:5px 5px 5px orange, -5px -5px 5px green;
+        
+    	background: blue;
+    }
+    
+    block > div:nth-child(2n+1) > div {
+    	background: white;
+        margin-top: 10px;
+        color: black;
+        border-radius: 25px;
+        border:20px solid transparent;
+         border-image-source:url(https://webcoban.vn/image/matrix.png);
+           border-image-slice:50 50 50 50;
+           border-image-repeat:repeat;
+
+    }
+    
+    block > div:nth-child(2n) > div {
+    	background-color: yellow;
+        background-clip: padding-box;
+        /*background-size: 81px;*/
+        background-image: url(https://img2.thuthuatphanmem.vn/uploads/2019/02/22/tim-dap-nen-caro_121246204.gif);
+        background-repeat: repeat-x;
+        border-top: red 25px dotted;
+        border-bottom-right-radius: 25px;
+        margin-top: 10px;
+        color: black;
+    }
+    
+    
+    div[title~="red"] {
+    	color: red !important;
+    }
+    
+    div[title*="20px"] {
+        font-size: 20px;
+    }
+    
+    div[title*="bold"] {
+        font-weight: 700;
+    }
+    div[title*="italic"] {
+        font-style: italic;
+    }
+    
+    div[title~="right"] {
+		text-align: right;
+    }
+    
+    div[title~="center"] {
+		text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<block>
+	<div>
+    	Div 1
+        <div title="red">
+        	Div 1a
+        </div>
+    </div>
+	<div>
+    	Div 2
+    	<div title="red 20px-bold right">
+        	Div 2a
+        </div>
+  	</div>
+	<div>
+    	Div 3
+        <div title="red 20px-italic-bold center">
+        	Div 3a
+        </div>
+    </div>
+	<div>
+    	Div 4
+        <div title="20px-italic-bold center">
+        	Div 4a
+        </div>
+    </div>
+	<div>
+    	Div 5
+        <div>
+        	Div 5a
+        </div>
+    </div>
+</block>
+
+</body>
+</html>
