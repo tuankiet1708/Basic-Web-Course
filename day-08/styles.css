@@ -1,0 +1,89 @@
+ul.list-with-image {
+    list-style-image: url(https://webcoban.vn/image/check.jpg);
+}
+
+ul {
+    list-style-type: decimal-leading-zero;
+    list-style-image: none;
+}
+
+td{
+    height:400px;
+    width: 300px;
+    text-align: center;
+    letter-spacing: 5px;
+    word-break:break-word;
+}
+.top {
+    vertical-align:top;
+}
+.middle {
+    vertical-align:middle;
+}
+.bottom {
+    vertical-align:bottom;
+}
+.red-overline-wavy {
+    text-decoration: overline red wavy;
+}
+.no-select {
+    user-select: none;
+}
+.vertical-left {
+    writing-mode:vertical-lr;
+}
+
+h1.html + p {
+    color: red;
+}
+h1.css ~ p {
+    color: red;
+}
+
+p.pseudo{
+    border:1px solid black;
+}
+p.pseudo:before{
+    content:"Hello - ";
+    color:red;
+    background-color:yellow;
+}
+
+.pseudo-2 {
+    font-size: 48px;
+}
+
+.pseudo-hover:hover {
+    background: green;
+}
+.pseudo-valid-invalid :valid, 
+.pseudo-valid-invalid *:valid {
+    background-color: yellow;
+}
+
+.pseudo-valid-invalid :invalid {
+    background-color: red;
+    color: white;
+}
+.pseudo-valid-invalid :in-range {
+    background-color: purple;
+    color: white;
+}
+.pseudo-valid-invalid :out-of-range {
+    background-color: blue;
+    color: white;
+}
+
+/* :first-child,
+*:first-child {
+    border:2px solid red;
+} */
+/* .pseudo-not div {
+    color: red;
+}
+.pseudo-not div.selected {
+    color: black;
+} */
+.pseudo-not :not(.selected) {
+    color: red;
+}
