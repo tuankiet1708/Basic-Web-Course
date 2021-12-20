@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DAY 09 - TABLE, BOX-SIZING, QUOTES, COLUMNS, FILTER, OPACITY</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="table-container">
+        <table>
+            <caption>SINH VIÊN</caption>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Quê quán</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Trần Anh Đức</td>
+                    <td>03/08/1993</td>
+                    <td>Nam</td>
+                    <td>Cần Thơ</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kiều Thị Thu Hằng</td>
+                    <td>04/09/1991</td>
+                    <td>Nữ</td>
+                    <td>Vĩnh Long</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vương Thị Lê Na</td>
+                    <td>06/10/1991</td>
+                    <td>Nữ</td>
+                    <td>Sóc Trăng</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dương Kim Thương</td>
+                    <td>16/11/1990</td>
+                    <td>Nam</td>
+                    <td>Trà Vinh</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mai Đức Hiếu</td>
+                    <td>18/06/1989</td>
+                    <td>Nam</td>
+                    <td>Hậu Giang</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+    <p>box-sizing:border-box</p>
+    <div class="box-container border-box">
+        <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+    </div>
+    <hr/>
+    <p>box-sizing:content-box</p>
+    <div class="box-container content-box">
+        <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+    </div>
+    <hr/>
+    <p><q class="quote">Lập Trình Web Cơ Bản</q></p>
+    <hr/>
+    <p class="text column-fill-auto">- Tình yêu, hay ái tình, là một loạt các cảm xúc, trạng thái tâm lý, và thái độ khác nhau dao động từ tình cảm cá nhân đến niềm vui sướng. Tình yêu thường là một cảm xúc thu hút mạnh mẽ và nhu cầu muốn được ràng buộc gắn bó. Nó cũng có thể là một đức tính đại diện cho lòng tốt của con người, sự nhân từ, và sự thông cảm mối quan tâm trung thành và vị tha hướng tới người khác. Nó cũng có thể mô tả các hành động nhân văn và thông cảm đối với người khác, chính bản thân mình hoặc các con vật. Người Hy Lạp cổ đại xác định bốn hình thức của tình yêu: Quan hệ gần gũi của họ hàng hay người thân, tình bạn, ham muốn tình dục hoặc cảm xúc lãng mạn, và xúc cảm dành cho các giá trị tôn giáo. Các tác giả hiện đại đã phân biệt các biến thể chi tiết hơn nữa của tình yêu lãng mạn. Các nền văn hóa không phải của phương Tây cũng có các biến thể khác nhau cho các trạng thái cảm xúc này. Sự đa dạng của việc sử dụng và ý nghĩa kết hợp với sự phức tạp của những cảm giác của tình yêu làm cho việc thống nhất xác định thế nào là tình yêu trở nên cực kỳ khó khăn khi so với các trạng thái cảm xúc khác.</p>
+    <hr/>
+    <p class="text column-fill-balance">- Tình yêu, hay ái tình, là một loạt các cảm xúc, trạng thái tâm lý, và thái độ khác nhau dao động từ tình cảm cá nhân đến niềm vui sướng. Tình yêu thường là một cảm xúc thu hút mạnh mẽ và nhu cầu muốn được ràng buộc gắn bó. Nó cũng có thể là một đức tính đại diện cho lòng tốt của con người, sự nhân từ, và sự thông cảm mối quan tâm trung thành và vị tha hướng tới người khác. Nó cũng có thể mô tả các hành động nhân văn và thông cảm đối với người khác, chính bản thân mình hoặc các con vật. Người Hy Lạp cổ đại xác định bốn hình thức của tình yêu: Quan hệ gần gũi của họ hàng hay người thân, tình bạn, ham muốn tình dục hoặc cảm xúc lãng mạn, và xúc cảm dành cho các giá trị tôn giáo. Các tác giả hiện đại đã phân biệt các biến thể chi tiết hơn nữa của tình yêu lãng mạn. Các nền văn hóa không phải của phương Tây cũng có các biến thể khác nhau cho các trạng thái cảm xúc này. Sự đa dạng của việc sử dụng và ý nghĩa kết hợp với sự phức tạp của những cảm giác của tình yêu làm cho việc thống nhất xác định thế nào là tình yêu trở nên cực kỳ khó khăn khi so với các trạng thái cảm xúc khác.</p>
+    <hr/>
+    <img class="blur" src="https://webcoban.vn/image/pineapple.jpg">
+    <hr/>
+    <div class="red opacity-100">Red 100%</div>
+    <div class="red opacity-50">Red 50%</div>
+    <div class="red opacity-30">Red 30%</div>
+    <div class="blue opacity-100">Blue 100%</div>
+    <div class="blue opacity-50">Blue 50%</div>
+    <div class="blue opacity-30">Blue 30%</div>
+</body>
+
+</html>
