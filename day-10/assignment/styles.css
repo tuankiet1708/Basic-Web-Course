@@ -1,0 +1,168 @@
+#cat-move {
+    box-sizing: border-box;
+    border: 10px solid blue;
+    width: 200px;
+    height: 200px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 10px 10px #888888;
+    top: 0px;
+    left: 0px;
+    position: relative;
+
+    /* Chỉ cho phép scroll theo chiều ngang */
+    /*         
+        overflow-x:
+        overflow-y:
+    */
+
+    /* Hiệu ứng chuyển động diễn ra trong vòng 10s và được lặp lại mãi mãi */
+    /*
+        animation-name:
+        animation-duration:
+        animation-iteration-count:
+    */
+
+    /* Độ ưu tiên hiển thị cao hơn element #box, nhưng thấp hơn nút [^ TOP] ở góc phải */
+    /* 
+        z-index:
+    */
+}
+
+@keyframes move {
+
+    /* 
+        Hiệu ứng di chuyển hình chạy theo 4 góc của màn hình, 
+        chuyển màu border theo thứ tự blue -> red -> green -> yellow -> blue.
+        Tiếp tục cài đặt hiệu ứng cho các góc còn lại.
+    */
+    0% {
+        top: 0px;
+        left: 0px;
+        border: 10px solid blue;
+    }
+}
+
+/*-----------*/
+
+#box {
+    /* 
+        Sử dụng position:relative và bổ sung các thuộc tính CSS phù hợp 
+        để element #box hiện ở vị trí như trong video mô tả
+    */
+    text-align: center;
+}
+
+/* 
+    Cài đặt CSS cho element <a>Xem thêm</a> hiển thị như một nút nhấn, 
+    lưu ý khi rê chuột lên nút nhấn, màu nút sẽ sáng hơn so với bình thường.
+*/
+/* 
+    ...
+*/
+
+#content {
+    width: 100%;
+    background: yellow;
+    padding: 100px 0px;
+}
+
+.absolute {
+    font-size: 48px;
+    font-weight: 700;
+    background: white;
+    border: 8px solid black;
+    padding: 10px;
+
+    /* 
+        Sử dụng position:absolute và bổ sung các thuộc tính CSS phù hợp 
+        để khung [This is a box] hiển thị giống trong video mô tả
+    */
+    /* 
+        ... 
+    */
+
+    /* 
+        Độ ưu tiên hiển thị cao hơn element #cat-move
+    */
+    /* 
+        z-index:
+    */
+}
+
+.relative {
+    border: 1px solid black;
+    background-color: pink;
+
+    /* 
+        Sử dụng position:relative và bổ sung các thuộc tính CSS phù hợp 
+        để nội dung [2) Tài liệu hướng dẫn học CSS] hiển thị giống trong video mô tả
+    */
+    /* 
+        ... 
+    */
+}
+
+/* 
+    Sử dụng transition và cài đặt CSS bổ sung 
+    để khung [This is a box] khi được rê chuột vào 
+    sẽ có hiệu ứng như trong video mô tả.
+*/
+.transition {
+    width: 400px;
+    /* 
+        ... 
+    */
+}
+
+/*-----------*/
+
+#float-colors {
+    position: relative;
+    top: -200px;
+}
+
+/* 
+    Sử dụng float và cài đặt bổ sung các thuộc tính CSS phù hợp, 
+    sao cho các element #pink, #red, #green, #blue và #black 
+    hiển thị như trong video mô tả
+*/
+#pink {
+    /* 
+        ...
+    */
+}
+
+#red {
+    /* 
+        ...
+    */
+}
+
+#green {
+    /* 
+        ...
+    */
+}
+
+#blue {
+    /* 
+        ...
+    */
+}
+
+#black {
+    /* 
+        ...
+    */
+}
+
+/*-----------*/
+
+/* 
+    Sử dụng position:fixed và cài đặt CSS cho element <div id="top">...</div> 
+    sao cho hiển thị giống trong video mô tả
+*/
+/* 
+    ...
+*/
