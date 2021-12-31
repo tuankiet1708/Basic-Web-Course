@@ -1,0 +1,144 @@
+
+body {
+    margin: 0px;
+    font-family: 'Roboto Slab';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #39e4c2;
+    padding: 20px;
+    text-align: center;
+}
+
+.header div:nth-child(1) {
+    font-size: 25px;
+}
+
+.menu {
+    display: flex;
+    background-color: #333;
+}
+
+.menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu a:hover,
+.menu a.active
+ {
+    background-color: #ddd;
+    color: black;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heading {
+    border-bottom: 5px rgba(0,0,0,0.5) solid;
+    text-align: center;
+    font-size: 18px;
+}
+.heading:first-letter {
+    font-weight: bold;
+    color: grey;
+    font-size: 32px;
+    text-transform: capitalize; 
+}
+
+.body .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+.body .side p:nth-child(1) {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.body .side img {
+    width: 100%;
+}
+
+.body .main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* .body .main p:nth-child(1) {
+    font-weight: bold;
+    font-size: 19px;
+    margin: 3px 0px -10px;
+} */
+
+.body .main p:last-child {
+    text-align: right;
+}
+
+.footer {
+    background-color: #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+table td, table th {
+    padding: 10px;
+}
+.table-kinh-nghiem tbody tr:nth-child(2n) {
+    background-color: rgba(0,0,0,0.05);
+}
+.table-kinh-nghiem tbody tr:nth-child(2n+1) {
+    background-color: rgba(0,0,0,0.1);
+}
+.table-kinh-nghiem tbody tr:hover {
+    background-color: white;
+}
+.so-thich {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.so-thich div {
+    background-color: #3AE4C1;
+    margin-bottom: 5px;
+    padding: 15px;
+    transition-property: width font-size;
+    transition-duration: 2s;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.so-thich div:hover {
+    width: 400px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+ul.list-with-image {
+    list-style-image: url(https://webcoban.vn/image/check.jpg);
+}
+@media screen and (max-width: 500px) {
+
+    .body,
+    .menu {
+        flex-direction: column;
+    }
+}

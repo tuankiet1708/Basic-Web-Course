@@ -1,102 +1,22 @@
 <html>
 
 <head>
+    <title>Trang chủ</title> 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <style>
-        body {
-            margin: 0px;
-            font-family: 'Roboto Slab';
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .header {
-            background-color: #39e4c2;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header div:nth-child(1) {
-            font-size: 25px;
-        }
-
-        .menu {
-            display: flex;
-            background-color: #333;
-        }
-
-        .menu a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .menu a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .body {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .body .side {
-            flex: 30%;
-            background-color: #f1f1f1;
-            padding: 15px;
-        }
-
-        .body .side p:nth-child(1) {
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        .body .side img {
-            width: 100%;
-        }
-
-        .body .main {
-            flex: 70%;
-            background-color: white;
-            padding: 20px;
-        }
-
-        .body .main p:nth-child(1) {
-            font-weight: bold;
-            font-size: 19px;
-            margin: 3px 0px -10px;
-        }
-
-        .body .main p:nth-child(3) {
-            text-align: right;
-        }
-
-        .footer {
-            background-color: #ddd;
-            padding: 15px;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 500px) {
-
-            .body,
-            .menu {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
 <body>
     <div class="header">
-        <div>Header</div>
+        <div>Trang chủ</div>
         <div>(giới thiệu sơ qua trang web)</div>
     </div>
-    <div class="menu"><a href="#">Link 1</a><a href="#">Link 2</a><a href="#">Link 3</a><a href="#">Link 4</a></div>
+    <div class="menu">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
     <div class="body">
         <div class="side">
             <p>Thông tin tác giả</p>
@@ -107,53 +27,55 @@
             <p><img src="https://webcoban.vn/image/hugo2.jpg" style="filter:grayscale(50%);"></p>
         </div>
         <div class="main">
-            <p>Tiêu đề bài viết</p>
-            <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+            <section>
+                <p class="heading">Kinh nghiệm làm việc</p>
+                <div class="content">
+                    <table class="table-kinh-nghiem" border="1">
+                        <thead>
+                            <th>STT</th>
+                            <th>Thời gian</th>
+                            <th>Tên Cty</th>
+                            <th>Vị trí</th>
+                            <th>Công việc</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>05/2014 - 7/2020</td>
+                                <td>VNG</td>
+                                <td>Software Engineer</td>
+                                <td align="left">
+                                    <ul class="list-with-image">
+                                        <li>Design</li>
+                                        <li>Develop</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>07/2020 - Current</td>
+                                <td>Vsee</td>
+                                <td>Software Engineer</td>
+                                <td align="left">
+                                    <ul class="list-with-image">
+                                        <li>Design</li>
+                                        <li>Develop</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <p class="heading">Sở thích</p>
+                <div class="content so-thich">
+                    <div>Đọc sách</div>
+                    <div>Du lịch</div>
+                </div>
+            </section>
+
             <p>Ngày đăng: 26/12/2021</p>
         </div>
     </div>
