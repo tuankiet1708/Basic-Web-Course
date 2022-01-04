@@ -1,0 +1,176 @@
+#cat-move {
+    box-sizing: border-box;
+    border: 10px solid blue;
+    width: 200px;
+    height: 200px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 10px 10px #888888;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@keyframes move {
+    0% {
+        top: 0px;
+        left: 0px;
+        border: 10px solid blue;
+    }
+
+    50% {
+        top: 0px;
+        left: calc(100vw - 220px);
+        border: 10px solid red;
+    }
+
+    60% {
+        top: calc(100vh - 220px);
+        left: calc(100vw - 220px);
+        border: 10px solid green;
+    }
+
+    80% {
+        top: calc(100vh - 220px);
+        left: 0px;
+        border: 10px solid yellow;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        border: 10px solid blue;
+    }
+}
+
+/*  */
+
+#box {
+    position: relative;
+    display: block;
+    top: -200px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#box a {
+    display: inline-block;
+    border: 1px solid #73AD21;
+    background-color: #73AD21;
+    padding: 10px 12px;
+    box-shadow: 2px 2px 5px #6c6969;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white;
+}
+
+#box a:hover {
+    border: 1px solid #90d331;
+    background-color: #90d331;
+}
+
+#box a:active {
+    border: 1px solid #669f15;
+    background-color: #669f15;
+}
+
+#content {
+    width: 100%;
+    background: yellow;
+    padding: 100px 0px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 48px;
+    font-weight: 700;
+    background: white;
+    border: 8px solid black;
+    padding: 10px;
+    z-index: 2;
+}
+
+.relative {
+    border: 1px solid black;
+    background-color: pink;
+    position: relative;
+    top: -35px;
+}
+
+.transition {
+    width: 400px;
+    transition-property: width left;
+    transition-duration: 2s;
+}
+
+.transition:hover {
+    width: calc(100% - 250px);
+    left: 200px;
+}
+
+/*  */
+#float-colors {
+    position: relative;
+    top: -200px;
+}
+
+#pink {
+    width: 55%;
+    height: 50px;
+    background-color: pink;
+}
+
+#red {
+    width: 30%;
+    height: 50px;
+    background-color: red;
+    float: left;
+}
+
+#green {
+    width: 40%;
+    height: 50px;
+    background-color: green;
+    float: right;
+}
+
+#blue {
+    width: 20%;
+    height: 50px;
+    background-color: blue;
+    float: left;
+}
+
+#black {
+    width: 40%;
+    height: 50px;
+    background-color: black;
+    float: left;
+}
+
+/*  */
+
+#top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+#top a {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 12px;
+    box-shadow: 2px 2px 5px #6c6969;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white;
+}
