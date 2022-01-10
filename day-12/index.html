@@ -1,0 +1,115 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Day 12 - Javascript</title>
+    <script type="text/javascript" src="./javascript.js"></script>
+</head>
+<body>
+    <h1>Bài 1</h1>
+    <script>
+        var name = "Kiet";
+        var age = 28;
+        var address = "Tp.HCM";
+        document.write(bai1(name, age, address));
+        document.write(bai1(name, age, address));
+        document.write(bai1(name, age, address));
+        document.write(bai1(name, age, address));
+        document.write(bai1(name, age, address));
+    </script>
+
+    <h1>Bài 2</h1>
+    <script>
+        document.write(bai2.intro());
+        document.write(bai2.intro());
+        document.write(bai2.intro());
+        document.write(bai2.intro());
+        document.write(bai2.intro());
+
+        // bai2.name = "Thang";
+        // bai2.age = 29;
+        // bai2.address = "Japan";
+        // document.write(bai2.intro());
+
+        // bai2.name = "Dieu";
+        // bai2.age = 28;
+        // bai2.address = "Japan";
+        // document.write(bai2.intro());
+    </script>
+
+    <h1>Bài 3</h1>
+    <script>
+        var text = "Tôi tên \"{{name}}\", năm nay tôi \"{{age}} tuổi\".\nTôi đang sống tại \"{{address}}\"."
+    </script>
+    <h2>(1) Tìm kiếm và thay thế {{name)}}, {{age}}, và {{address}} bằng các giá trị tương ứng.</h2>
+    <script>
+        var yeuCauSo1 = text.replace("{{name}}","Kiệt")
+                            .replace("{{age}}","29")
+                            .replace("{{address}}","Tp.HCM")
+        document.write(yeuCauSo1);
+    </script>
+    <h2>(2) Đếm độ dài của đoạn text sau khi thay thế nội dung.</h2>
+    <script>
+        var yeuCauSo2 = yeuCauSo1.length;
+        document.write(yeuCauSo2);
+    </script>
+    <h2>(3) Loại bỏ đoạn chữ năm nay tôi ra khỏi đoạn text đã thay thế nội dung ở (1), và in đoạn text còn lại sau khi loại bỏ.</h2>
+    <script>
+        var yeuCauSo3 = yeuCauSo1.replace('năm nay tôi', '')
+        document.write(yeuCauSo3);
+    </script>
+    <h2>(4) Chuyển toàn bộ ký tự của đoạn text (1) về dạng chữ in hoa.</h2>
+    <script>
+        var yeuCauSo4 = yeuCauSo1.toUpperCase();
+        document.write(yeuCauSo4);
+    </script>
+    <h2>(5) Chuyển toàn bộ ký tự của đoạn text (1) về dạng chữ thường.</h2>
+    <script>
+        var yeuCauSo5 = yeuCauSo1.toLowerCase();
+        document.write(yeuCauSo5);
+    </script>
+
+    <h2>(6) Trích xuất chuỗi con Tôi ở đầu bằng 2 cách: substring(), substr().</h2>
+    <script>
+        var yeuCauSo6 = yeuCauSo1.substring(0, 3);
+        document.write(yeuCauSo6 + "<br/>");
+        yeuCauSo6 = yeuCauSo1.substr(0, 3);
+        document.write(yeuCauSo6);
+    </script>
+
+    <h2>(7) Trả về chỉ số của chuỗi Tôi được tìm thấy sau cùng.</h2>
+    <script>
+        var yeuCauSo7 = yeuCauSo1.lastIndexOf("Tôi");
+        document.write(yeuCauSo7);
+    </script>
+
+    <h2>(8) Nối chuỗi ”Tôi là người Việt Nam.” vào sau đoạn text (1).</h2>
+    <script>
+        var yeuCauSo8 = yeuCauSo1.concat(" ")
+                                 .concat("Tôi là người Việt Nam.");
+        document.write(yeuCauSo8);
+    </script>
+
+    <h2>(9) Trích xuất ký tự kế cuối trong chuỗi (8).</h2>
+    <script>
+        var yeuCauSo9 = yeuCauSo8.charAt(yeuCauSo8.length - 2);
+        document.write(yeuCauSo9);
+    </script>
+
+    <h2>(10) Tìm tất cả những chữ tôi (không phân biệt trường hợp chữ in hoa hay chữ thường) bên trong chuỗi text.</h2>
+    <script>
+        var yeuCauSo10 = yeuCauSo8.match(/tôi/gi);
+        document.write(yeuCauSo10);
+    </script>
+
+
+    <h1>Bài 4</h1>
+    <button onclick="hello()">Xin chào</button>
+    <p id="demo"></p>
+
+    <h1>Bài 5</h1>
+    <p>1.25^4  +  |-3.5|^2  - 1</p>
+    <script>
+        var bai5 =  Math.pow(1.25, 4) + Math.pow(Math.abs(-3.5), 2) - 1;
+        document.write(bai5);
+    </script>
+
+</body>
