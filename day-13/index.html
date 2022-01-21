@@ -1,0 +1,73 @@
+<head>
+    <style>
+        li {
+            list-style-image: url(./image.jpg);
+        }
+    </style>
+</head>
+<body>
+    
+<b>Thời gian hiện tại:</b>
+<script>
+     var date = (new Date()).toString();
+     document.write(date);
+ // Giả sử date = 'Tue Jan 11 2022 21:31:52 GMT+0700 (Indochina Time)'
+    var array_time = date.split(" ");
+    console.log(array_time); // in ra giá trị ở phần console trên browser
+    /*
+    Tue             0
+    Jan             1
+    11              2
+    2022            3  
+    21:31:52        4
+    GMT+0700        5
+    (Indochina      6
+    Time)           7
+    */
+    var weekday = array_time[0];
+    var month = array_time[1]; 
+    var day = array_time[2];   
+    var year = array_time[3];  
+    var hour = array_time[4];
+    var TimeZone =array_time[5];
+    var getNumber = date.match(/\d/g);
+    console.log(getNumber);
+    var sum = 0;
+    for(var i = 0; i < getNumber.length; i++){
+        sum += +getNumber[i];
+    }
+</script>
+<ul>
+    <li>
+        <b>Thứ hiện tại : </b>
+        <span><script>document.write(weekday)</script></span>
+    </li>
+    <li>
+        <b>Tháng hiện tại : </b>
+        <span><script>document.write(month)</script></span>
+    </li
+    ><li>
+        <b>Ngày hiện tại : </b>
+        <span><script>document.write(day)</script></span>
+    </li>
+    <li>
+        <b>Năm hiện tại : </b>
+        <span><script>document.write(year)</script></span>
+    </li>
+    <li>
+        <b>Giờ hiện tại : </b>
+        <span><script>document.write(hour)</script></span>
+    </li>
+    <li>
+        <b>Múi giờ hiện tại : </b>
+        <span><script>document.write(TimeZone)</script></span>
+    </li>
+    <li>
+        <b>Tổng các chữ số có trong chuỗi : </b>
+        <span><script>document.write(sum)</script></span>
+    </li>
+    <script>
+    
+    </script>
+</ul>
+</body>
