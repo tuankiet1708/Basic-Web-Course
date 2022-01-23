@@ -1,0 +1,29 @@
+.square{
+    height:70px;
+    width:70px;
+    float:left;
+    border:1px solid gray;
+    margin-left:5px;
+    margin-bottom:5px;
+    text-align: center;
+    line-height: 4.5;
+}
+.negative {
+    background-color: rgba(255, 1, 0, 1);
+    color: white;
+}
+.positive {
+    background-color: rgba(0, 128, 2, 1);
+    color: white;
+}
+.even {
+    font-weight: bold;
+}
+.odd {
+    font-weight: bold;
+    opacity: 0.5;
+}
+.zero {
+    background-color: white;
+    color: black;
+}
