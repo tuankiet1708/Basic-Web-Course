@@ -1,67 +1,114 @@
 function submit() {
-    // đọc giá trị từ input #numbers
-    var numbers = document.getElementById("numbers").value;
+    try {
+        // đọc giá trị từ input #numbers
+        var numbers = document.getElementById("numbers").value;
 
-    // tách các số từ chuỗi
-    numbers = numbers.split(",").map(function(item) {return parseInt(item)});
+        // xử lý lỗi
+        if (numbers.trim() == "") {
+            // alert("'Dãy số cần tính' không được để trống.");
+            // return;
+            throw "'Dãy số cần tính' không được để trống.";
+        }
 
-    // sắp xếp theo chiều giảm dần
-    numbers.sort(function(a, b){return b - a});
+        // tách các số từ chuỗi
+        numbers = numbers.split(",");
+        var total = numbers.length;
 
-    document.getElementById("total").innerHTML = numbers.length;
+        // xử lý lỗi
+        for (var i = 0; i < total; i++) {
+            var castNumber = parseInt(numbers[i]);
 
-    // đọc giá trị từ input #rows
-    var rows = parseInt(document.getElementById("rows").value);
+            if (isNaN(castNumber) || castNumber.toString() != numbers[i]) {
+                // alert("'Dãy số cần tính' chỉ chấp nhận số nguyên.");
+                // return;
+                throw "'Dãy số cần tính' chỉ chấp nhận số nguyên.";
+            } 
 
-    // tính số lượng số hiển thị mỗi dòng
-    var nItemsPerRow = Math.ceil(numbers.length / rows);
+            numbers[i] = castNumber;
+        }
 
-    console.log({numbers, rows, nItemsPerRow});
-    
-    // tính toán chuỗi HTML sẽ in ra màn hình
-    var result = "";
+        // sắp xếp theo chiều giảm dần
+        numbers.sort(function(a, b){return b - a});
 
-    for(var i = 0; i < rows; i++){
-        for(var j = 0; j < nItemsPerRow; j++){
-            // tính chỉ số của phần tử tiếp theo 
-            var offset = i * nItemsPerRow + j;
+        document.getElementById("total").innerHTML = numbers.length;
 
-            // nếu chỉ số của phần tử vẫn nhỏ hơn số lượng các con số thì thực hiện 
-            if (offset <= (numbers.length - 1) ) {
-                var className = "";
+        // đọc giá trị từ input #rows
+        var rows = document.getElementById("rows").value;
 
-                //
-                var curNumber = numbers[offset];
+        // xử lý lỗi
+        if (rows.trim() == "") {
+            // alert("'Số dòng tối đa' không được để trống.");
+            // return;
+            throw "'Số dòng tối đa' không được để trống.";
+        }
 
-                // kiểm tra số chẵn, lẻ
-                switch (Math.abs(curNumber) % 2) {
-                    case 0: 
-                        className = "even ";
-                        break;
-                    case 1: 
-                        className = "odd ";
-                        break;
-                }
+        var castRows = parseInt(rows);
+        if (isNaN(castRows) || castRows.toString() != rows) {
+            //
+            // alert("'Số dòng tối đa' chỉ chấp nhận số nguyên dương.");
+            // return;
+            throw "'Số dòng tối đa' chỉ chấp nhận số nguyên.";
+        }
 
-                // kiểm tra số 0, < 0, > 0
-                if (curNumber < 0) {
-                    className += "negative";
-                } else if (curNumber > 0) {
-                    className += "positive";
+        if (castRows <= 0) {
+            throw "'Số dòng tối đa' không được phép nhỏ hơn 1.";
+        }
+
+        rows = parseInt(rows);
+
+        // tính số lượng số hiển thị mỗi dòng
+        var nItemsPerRow = Math.ceil(numbers.length / rows);
+
+        console.log({numbers, rows, nItemsPerRow});
+        
+        // tính toán chuỗi HTML sẽ in ra màn hình
+        var result = "";
+
+        for(var i = 0; i < rows; i++){
+            for(var j = 0; j < nItemsPerRow; j++){
+                // tính chỉ số của phần tử tiếp theo 
+                var offset = i * nItemsPerRow + j;
+
+                // nếu chỉ số của phần tử vẫn nhỏ hơn số lượng các con số thì thực hiện 
+                if (offset <= (numbers.length - 1) ) {
+                    var className = "";
+
+                    //
+                    var curNumber = numbers[offset];
+
+                    // kiểm tra số chẵn, lẻ
+                    switch (Math.abs(curNumber) % 2) {
+                        case 0: 
+                            className = "even ";
+                            break;
+                        case 1: 
+                            className = "odd ";
+                            break;
+                    }
+
+                    // kiểm tra số 0, < 0, > 0
+                    if (curNumber < 0) {
+                        className += "negative";
+                    } else if (curNumber > 0) {
+                        className += "positive";
+                    } else {
+                        className += "zero";
+                    }
+
+                    result += "<div class='square " + className + "'>" + curNumber + "</div>";
                 } else {
-                    className += "zero";
+                    break;
                 }
-
-                result += "<div class='square " + className + "'>" + curNumber + "</div>";
-            } else {
-                break;
             }
+            
+            // xuống dòng
+            result += "<div style='clear:both'></div>";
         }
         
-        // xuống dòng
-        result += "<div style='clear:both'></div>";
+        // In ra màn hình
+        document.getElementById("result").innerHTML = result;
     }
-    
-    // In ra màn hình
-    document.getElementById("result").innerHTML = result;
+    catch (err) {
+        alert(err);
+    }
 }
