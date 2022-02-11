@@ -4,6 +4,7 @@
     <title>Trang chủ</title> 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script type="text/javascript" src="./javascript.js"></script>
 </head>
 
 <body>
@@ -19,11 +20,16 @@
     </div>
     <div class="body">
         <div class="side">
-            <p>Thông tin tác giả</p>
-            <p>- Họ tên: . . . .</p>
-            <p>- Ngày sinh: . . . .</p>
-            <p>- Giới tính: . . . .</p>
-            <p>- Địa chỉ: . . . .</p>
+            <p>
+                Thông tin tác giả 
+                <span id="profileActionButtons">
+                    <a href="javascript:;" onclick="profileOnEdit()">Sửa</a>
+                </span>
+            </p>
+            <p>- Họ tên: <span id="name">. . . .</span></p>
+            <p>- Ngày sinh: <span id="birthday">. . . .</span></p>
+            <p>- Giới tính: <span id="sex">. . . .</span></p>
+            <p>- Địa chỉ: <span id="address">. . . .</span></p>
             <p><img src="https://webcoban.vn/image/hugo2.jpg" style="filter:grayscale(50%);"></p>
         </div>
         <div class="main">
