@@ -142,3 +142,9 @@ ul.list-with-image {
         flex-direction: column;
     }
 }
+
+/* Ngăn co giãn textarea không kiểm soát */
+[id^="expJob"] textarea {
+    max-width: 250px;
+    min-width: 100px;
+}
