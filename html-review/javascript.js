@@ -117,7 +117,16 @@ function makeTableBodyOfWorkingExp() {
 
 makeTableBodyOfWorkingExp();
 
+// Biến lưu số dòng đang được chỉnh sửa
+var numOfRowsInEditing = 0;
+
 function workingExpOnEdit(index) {
+    numOfRowsInEditing++;
+
+    var updateLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnUpdate", "Cập nhật", index);
+    var cancelLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnCancel", "Hủy", index);
+    replaceHTML("expActions_" + index,updateLink + '<br/>' + cancelLink)
+
     replaceHTML(
         "expTime_" + index, 
         makeTagInput("expTimeInput_" + index, workingExperience[index].time, "text")
@@ -146,4 +155,58 @@ function workingExpOnDelete(index) {
     } else {
         //
     }
+}
+
+
+// In gia tri cua mot Item trong Object ra dong HTML tuong ung
+function printItemValue(index) {
+    var editLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnEdit", "Sửa", index);
+    var deleteLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnDelete", "Xoá", index);
+    replaceHTML("expActions_" + index,editLink + '<br/>' + deleteLink);
+    replaceHTML("expTime_" + index,workingExperience[index].time );
+
+    replaceHTML(
+        "expCompanyName_" + index,workingExperience[index].companyName
+    );
+
+    replaceHTML(
+        "expPosition_" + index,workingExperience[index].position
+    );
+
+    replaceHTML(
+        "expJob_" + index,workingExperience[index].job
+    );
+    
+}
+function workingExpOnUpdate(index) {
+    numOfRowsInEditing--;
+
+    workingExperience[index].time = document.getElementById("expTimeInput_" + index).value;
+    workingExperience[index].companyName = document.getElementById("expCompanyNameInput_" + index).value;
+    workingExperience[index].position = document.getElementById("expPositionInput_" + index).value;
+    workingExperience[index].job = document.getElementById("expJobTextarea_" + index).value;
+    printItemValue(index);
+}
+
+function workingExpOnCancel(index) {
+    numOfRowsInEditing--;
+
+    printItemValue(index);
+}
+
+function workingExpOnCreate() {
+    if (numOfRowsInEditing > 0) {
+        alert("Bạn vui lòng hoàn tất cập nhật các dòng đang được chỉnh sửa trước khi thêm mới.");
+        return;
+    }
+
+    workingExperience.push({
+        "time": "",
+        "companyName": "",
+        "position": "",
+        "job": ""
+    });
+    makeTableBodyOfWorkingExp();
+    workingExpOnEdit(workingExperience.length - 1);
+    //
 }

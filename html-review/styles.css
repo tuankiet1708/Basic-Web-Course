@@ -148,3 +148,8 @@ ul.list-with-image {
     max-width: 250px;
     min-width: 100px;
 }
+
+.btn-create-container {
+    text-align: right;
+    margin-right: 10px;
+}
