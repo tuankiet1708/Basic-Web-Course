@@ -230,3 +230,11 @@ function workingExpOnCreate() {
     workingExpOnEdit(workingExperience.length - 1);
     //
 }
+
+$("#btn-login").click(function(e) {
+    $.get("login-form.html", function(data, status){
+        $('.main').html(data);
+    });
+
+    // $('.main').load("login-form.html");
+});
